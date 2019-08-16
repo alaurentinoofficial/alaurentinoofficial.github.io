@@ -1,0 +1,15 @@
+.header-pane {
+    height: 600px;
+    background: #063246;
+
+    display: flex;
+    justify-content: center;
+}
+
+.author-name {
+    align-self: flex-end;
+    
+    font-family: 'Roboto';
+    font-size: 25px;
+    color: #fff;
+}
