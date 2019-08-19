@@ -1,15 +1,85 @@
-.header-pane {
-    height: 600px;
-    background: #063246;
+/* ---- reset ---- */
 
-    display: flex;
-    justify-content: center;
+body {
+    margin: 0;
+    font:normal 75% Arial, Helvetica, sans-serif;
+    background: #fbfbfb;
 }
 
-.author-name {
-    align-self: flex-end;
-    
-    font-family: 'Roboto';
-    font-size: 25px;
-    color: #fff;
+#dashboard {
+    position: relative;
+    display: flex;
+    height: 600px;
+    width: 100%;
+}
+
+.myself {
+    width: 100%;
+    display: grid;
+    align-content: flex-end;
+    z-index: 1100;
+}
+
+.myself img {
+    width: 250px;
+    width: 250px;
+
+    margin: auto;
+    margin-bottom: 100px;
+
+    border-radius: 300px 300px;
+    border: 5px solid #ffffff;
+}
+  
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(2,0,36);
+    background: -moz-linear-gradient(0deg, rgba(2,0,36,1) 20%, rgb(5, 5, 71) 80%);
+    background: -webkit-linear-gradient(0deg, rgba(2,0,36,1) 20%, rgb(5, 5, 71)  80%);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 20%, #000  80%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#070763",GradientType=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.count-particles{
+    background: #000022;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 80px;
+    color: #13E8E9;
+    font-size: .8em;
+    text-align: left;
+    text-indent: 4px;
+    line-height: 14px;
+    padding-bottom: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+}
+
+.js-count-particles{
+    font-size: 1.1em;
+}
+
+#stats,
+.count-particles{
+    -webkit-user-select: none;
+}
+
+#stats{
+    border-radius: 3px 3px 0 0;
+    overflow: hidden;
+}
+
+.count-particles{
+    border-radius: 0 0 3px 3px;
 }
