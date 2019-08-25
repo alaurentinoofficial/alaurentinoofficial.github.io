@@ -82,7 +82,7 @@ canvas {
 
 
 #dashboard {
-    height: 600px;
+    height: 70%;
     background: #000;
     display: flex;
 
@@ -102,8 +102,8 @@ canvas {
 }
 
 .myself img {
-    width: 250px;
-    width: 250px;
+    width: 30%;
+    width: 30%;
 
     margin: auto;
     margin-bottom: 40px;
@@ -119,7 +119,7 @@ canvas {
     margin-bottom: 10px;
 
     text-align: center;
-    font-size: 32px;
+    font-size: 2.2vw;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     background: rgba(0,0,0,.4);
@@ -154,16 +154,6 @@ canvas {
     flex: 0 1 calc(50% - 10px - 2px);
     margin: auto;
     flex-direction: row;
-}
-
-@media screen and (max-width: 1000px) {
-    #whoiam > .text {
-        width: 90%;
-    }
-    .formations  {
-        width: 90%;
-        flex-wrap: wrap-reverse;
-    }
 }
 
 .formations > .formation-item {
@@ -221,4 +211,41 @@ canvas {
     margin: auto;
     font-size: 17px;
     color: rgba(255,255,255,0.75)
+}
+
+
+@media screen and (max-width: 1000px) {
+    #dashboard {
+        height: 100%;
+    }
+    .myself img {
+        width: 50%;
+        width: 50%;
+    }
+
+    .myname {
+        font-size: 4vw;
+    }
+
+    #whoiam > .text {
+        width: 80%;
+    }
+    .formations  {
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .formations > .formation-item {
+        margin: 20px;
+    }
+
+    .formations > .formation-item > .info {
+        font-size: 2.7vw;
+    }
+
+    .formations > .formation-item > .image-content > img {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+    }
 }
