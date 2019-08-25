@@ -1,5 +1,3 @@
-/* ---- reset ---- */
-
 body {
     margin: 0;
     font:normal 75% Arial, Helvetica, sans-serif;
@@ -11,16 +9,17 @@ canvas {
     display: block;
 }
 
+
+/*
+###########################
+       PARTICLE JS
+###########################
+*/
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
     background: #000;
-    /* background: rgb(2,0,36); */
-    /* background: -moz-linear-gradient(0deg, rgba(2,0,36,1) 20%, rgb(5, 5, 71) 80%);
-    background: -webkit-linear-gradient(0deg, rgba(2,0,36,1) 20%, rgb(5, 5, 71)  80%);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 20%, #000  80%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#070763",GradientType=1); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -41,29 +40,17 @@ canvas {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
-
-.js-count-particles{
-    font-size: 1.1em;
-}
-
-#stats,
-.count-particles{
-    -webkit-user-select: none;
-}
-
-#stats{
-    border-radius: 3px 3px 0 0;
-    overflow: hidden;
-}
-
-.count-particles{
-    border-radius: 0 0 3px 3px;
-}
+/*
+###########################
+###########################
+*/
 
 
-
-
-
+/*
+###########################
+         SECTION
+###########################
+*/
 .section {
     position: relative !important;
     padding-top: 70px;
@@ -80,8 +67,16 @@ canvas {
     font-weight: 600;
     color: #00a2ff;
 }
+/*
+###########################
+###########################
+*/
 
-
+/*
+###########################
+       DASHBOARD
+###########################
+*/
 #dashboard {
     padding: 0 !important;  
     height: 100%;
@@ -151,8 +146,17 @@ i {
     background: rgba(0,0,0,.4);
     border-radius: 2px;
 }
+/*
+###########################
+###########################
+*/
 
 
+/*
+###########################
+       WHO I AM
+###########################
+*/
 
 #whoiam {
     background: #041022;
@@ -170,10 +174,18 @@ i {
     font-family: Helvetica, 'Roboto', sans-serif;
     font-size: 17px;
 }
+/*
+###########################
+###########################
+*/
 
 
 
-
+/*
+###########################
+       EDUCATION
+###########################
+*/
 .formations  {
     width: 60%;
     display: flex;
@@ -222,9 +234,17 @@ i {
     width: 100px;
     margin: auto;
 }
+/*
+###########################
+###########################
+*/
 
 
-
+/*
+###########################
+         FOOTER
+###########################
+*/
 #footer {
     background: #030b18;
     padding: 5px;
@@ -268,8 +288,17 @@ i {
     font-size: 1vw;
     color: rgba(255,255,255,0.75)
 }
+/*
+###########################
+###########################
+*/
 
 
+/*
+###########################
+       RESPONSIVE
+###########################
+*/
 @media screen and (max-width: 1000px) {
     #dashboard {
         height: 100%;
@@ -328,3 +357,7 @@ i {
         color: rgba(255,255,255,0.75)
     }
 }
+/*
+###########################
+###########################
+*/
