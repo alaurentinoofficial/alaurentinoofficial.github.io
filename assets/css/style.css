@@ -82,7 +82,7 @@ canvas {
 
 
 #dashboard {
-    height: 70%;
+    height: 100%;
     background: #000;
     display: flex;
 
@@ -165,12 +165,13 @@ canvas {
 
     background: rgb(7, 25, 53);
     margin: 5px;
-    border-radius: 2px;
+    border-radius: 4px;
+    overflow: hidden;
     color: #eee;
 
-    -webkit-box-shadow: 0px 0px 16px -1px rgba(0, 20, 30, 0.7);
-    -moz-box-shadow:    0px 0px 16px -1px rgba(0, 20, 30, 0.7);
-    box-shadow:         0px 0px 16px -1px rgba(0, 20, 30, 0.7);
+    -webkit-box-shadow: 0px 0px 16px -1px rgba(0, 10, 20, 0.7);
+    -moz-box-shadow:    0px 0px 16px -1px rgba(0, 10, 20, 0.7);
+    box-shadow:         0px 0px 16px -1px rgba(0, 10, 20, 0.7);
 }
 
 .formations > .formation-item > .duration {
