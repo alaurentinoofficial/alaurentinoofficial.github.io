@@ -119,9 +119,6 @@ i {
     margin-top: -80px;
 }
 
-
-
-
 .myself {
     margin: auto;
     height: 100%;
@@ -230,11 +227,39 @@ i {
 
 #footer {
     background: #030b18;
-    height: 40px;
     padding: 5px;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+
+#footer > .social-medias {
+    margin: auto;
+    display: inline-flex;
+    flex-direction: row;
+}
+
+#footer > .social-medias > a {
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    height: 2vw;
+    width: 2vw;
+    background: #00a2ff;
+    border-radius: 50px 50px;
+
+    transition: .1s ease-in-out;
+}
+
+#footer > .social-medias > a:hover {
+    background: #0084d1;
+}
+
+#footer > .social-medias > a > img {
+    display: flex;
+    height: 60%;
+    width: 60%;
+    margin: auto;
 }
 
 #footer > .credits {
@@ -278,6 +303,22 @@ i {
         height: 200px;
         width: 200px;
         margin: auto;
+    }
+
+    #footer {
+        flex-direction: column;
+    }
+
+    #footer > .social-medias > a {
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        height: 13vw;
+        width: 13vw;
+        background: #00a2ff;
+        border-radius: 250px 250px;
+    
+        transition: .1s ease-in-out;
     }
 
     #footer > .credits {
