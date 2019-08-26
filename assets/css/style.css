@@ -145,6 +145,10 @@ i {
 
     border-radius: 300px 300px;
     border: 2px solid #000000;
+
+    -webkit-box-shadow: 0px 0px 370px -1px rgba(0, 161, 255, 0.5);
+    -moz-box-shadow:    0px 0px 370px -1px rgba(0, 161, 255, 0.5);
+    box-shadow:         0px 0px 370px -1px rgba(0, 161, 255, 0.5);
 }
 
 .myname {
@@ -291,6 +295,10 @@ i {
     background: linear-gradient(to right,#00a2ff,#00bdad);
     color: #fff;
     border-radius: 15px;
+
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 161, 255, 0.5);
+    -moz-box-shadow:    0px 0px 20px -1px rgba(0, 161, 255, 0.5);
+    box-shadow:         0px 0px 20px -1px rgba(0, 161, 255, 0.5);
 }
 /*
 ###########################
@@ -372,7 +380,7 @@ i {
     }
 
     .myname {
-        font-size: 4vw;
+        font-size: 5vw;
     }
 
     #whoiam > .text {
