@@ -1,33 +1,16 @@
 'use strict';
 
-var autoprefixer = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
-var del = require('del');
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
-var runSequence = require('run-sequence');
-var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
+var inject = require('gulp-inject');
 
 
-const AUTOPREFIXER_BROWSERS = [
-    'ie >= 10',
-    'ie_mob >= 10',
-    'ff >= 30',
-    'chrome >= 34',
-    'safari >= 7',
-    'opera >= 23',
-    'ios >= 7',
-    'android >= 4.4',
-    'bb >= 10'
-];
+gulp.task('default', ['styles', 'scripts', 'pages']);
 
 gulp.task('styles', function () {
     return gulp.src('./src/css/**/*.css')
-        // Compile SASS files
-        // .pipe(minifyCSS({keepSpecialComments: 1}))
-        // // Auto-prefix css styles for cross browser compatibility
-        .pipe(autoprefixer({ browsers: AUTOPREFIXER_BROWSERS }))
         // Minify the file
         .pipe(csso())
         // Output
@@ -47,6 +30,8 @@ gulp.task('scripts', function () {
 
 gulp.task('pages', function () {
     return gulp.src(['./src/*.html'])
+        .pipe(inject( gulp.src('./dist/css/**/*.css'), { relative:true } ))
+        .pipe(inject( gulp.src('./dist/js/**/*.js'), { relative:true } ))
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
