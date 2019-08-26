@@ -160,12 +160,12 @@ i {
 ###########################
 */
 
-#whoiam {
+#whoami {
     background: #041022;
 }
 
 
-#whoiam > .text {
+#whoami > .text {
     text-align: center;
     margin: auto;
     width: 40%;
@@ -193,7 +193,7 @@ i {
     display: flex;
     flex: 0 1 calc(50% - 10px - 2px);
     margin: auto;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 .formations > .formation-item {
@@ -209,9 +209,11 @@ i {
     overflow: hidden;
     color: #eee;
 
-    -webkit-box-shadow: 0px 0px 16px -1px rgba(0, 10, 20, 0.7);
-    -moz-box-shadow:    0px 0px 16px -1px rgba(0, 10, 20, 0.7);
-    box-shadow:         0px 0px 16px -1px rgba(0, 10, 20, 0.7);
+    -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    -moz-box-shadow:    0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    box-shadow:         0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+
+    z-index: 1200;
 }
 
 .formations > .formation-item > .duration {
@@ -228,7 +230,7 @@ i {
 }
 
 .formations > .formation-item > .image-content {
-    background: #0c2349;
+    background: #0a1e3f;
 }
 
 .formations > .formation-item > .image-content > img {
@@ -350,6 +352,35 @@ i {
        RESPONSIVE
 ###########################
 */
+@media screen and (max-width: 1280px) {
+    #whoami > .text {
+        width: 70%;
+        font-size: 3vw;
+    }
+
+    .formations  {
+        width: 70%;
+        flex-wrap: wrap-reverse;
+    }
+
+    .skills-content {
+        width: 70%;
+    }
+
+    #footer > .social-medias > a {
+        margin: 10px;
+        height: 4vw;
+        width: 4vw;
+        border-radius: 250px 250px;
+    
+        transition: .1s ease-in-out;
+    }
+
+    #footer > .credits {
+        font-size: 2vw;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .section > .title-content > .title {
         font-size: 5vw;
@@ -367,17 +398,17 @@ i {
         font-size: 5vw;
     }
 
-    #whoiam > .text {
+    #whoami > .text {
         width: 80%;
         font-size: 4vw;
     }
     .formations  {
         width: 90%;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
     }
 
     .formations > .formation-item {
-        margin: 20px;
+        margin: 25px;
         border-radius: 10px;
     }
 
@@ -403,7 +434,7 @@ i {
     .skills-content > .skill > .loadingbar {
         display: flex;
         width: 100%;
-        height: 15px;
+        height: 12px;
         border-radius: 100px;
         background: rgba(0,0,0,0.5);
     }
