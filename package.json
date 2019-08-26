@@ -1,27 +1,24 @@
 {
-    "name": "local-minifier",
+    "name": "alaurentinoofficial.github.io",
     "version": "0.1.0",
-    "description": "A local environment to minify CSS, JS, & HTML files",
+    "description": "",
     "license": "Apache-2.0",
-    "author": "Amardeep Rai",
+    "author": "Anderson Laurentino",
     "repository": {
         "type": "git",
-        "url": "https://github.com/amardeeprai/local-minifier"
+        "url": "https://github.com/alaurentinoofficial.github.io"
     },
     "devDependencies": {
-        "del": "^2.0.2",
-        "gulp": "^3.9.0",
+        "gulp": "^4.0.2",
         "gulp-autoprefixer": "latest",
         "gulp-csso": "^2.0.0",
         "gulp-htmlmin": "^3.0.0",
-        "gulp-sass": "^2.0.0",
+        "gulp-inject": "^5.0.4",
         "gulp-uglify": "^2.0.0",
+        "gulp-webserver": "^0.9.1",
         "run-sequence": "^1.2.2"
     },
     "engines": {
         "node": ">=0.12.0"
-    },
-    "dependencies": {
-        "gulp-inject": "^5.0.4"
     }
 }

@@ -5,9 +5,7 @@ var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify');
 var inject = require('gulp-inject');
-
-
-gulp.task('default', ['styles', 'scripts', 'pages']);
+var webserver = require('gulp-webserver');
 
 gulp.task('styles', function () {
     return gulp.src('./src/css/**/*.css')
@@ -29,12 +27,31 @@ gulp.task('scripts', function () {
 
 
 gulp.task('pages', function () {
-    return gulp.src(['./src/*.html'])
-        .pipe(inject( gulp.src('./dist/css/**/*.css'), { relative:true } ))
-        .pipe(inject( gulp.src('./dist/js/**/*.js'), { relative:true } ))
+    return gulp.src(['./src/index.html'])
+        .pipe(inject(gulp.src('./dist/css/**/*.css')))
+        .pipe(inject(gulp.src('./dist/js/**/*.js')))
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
         }))
         .pipe(gulp.dest('./'));
 });
+
+gulp.task('webserver', function () {
+    gulp.src('./')
+        .pipe(webserver({
+            livereload: true,
+            directoryListing: true,
+            open: true,
+            port: 3000
+        }));
+});
+
+
+gulp.task('default', function() {
+    return gulp.watch('./', gulp.series('pages', 'webserver'))
+});
+
+// gulp.task('watch', ['serve'], function () {
+//     gulp.watch('./', ['inject']);
+// });
