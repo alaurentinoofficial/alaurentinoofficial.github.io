@@ -182,7 +182,7 @@ i {
     text-align: justify;
     word-wrap: normal;
     font-family: Helvetica, 'Roboto', sans-serif;
-    font-size: 17px;
+    font-size: 1.1vw;
 }
 /*
 ###########################
@@ -256,20 +256,20 @@ i {
 */
 .skills-content {
     margin: auto;
-    width: 700px;
+    width: 40%;
     display: flex;
     flex-direction: column;
 }
 
 .skills-content > .skill {
     margin: 10px;
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
 }
 
 .skills-content > .skill > .title {
-    display: block;
-    width: 200px;
+    /* display: block;
+    width: 200px; */
 
     font-size: 17px;
 }
@@ -355,6 +355,10 @@ i {
 ###########################
 */
 @media screen and (max-width: 1000px) {
+    .section > .title-content > .title {
+        font-size: 5vw;
+    }
+
     #dashboard {
         height: 100%;
     }
@@ -369,6 +373,7 @@ i {
 
     #whoiam > .text {
         width: 80%;
+        font-size: 1.5vw;
     }
     .formations  {
         width: 90%;
@@ -377,33 +382,54 @@ i {
 
     .formations > .formation-item {
         margin: 20px;
+        border-radius: 10px;
     }
 
     .formations > .formation-item > .info {
-        font-size: 2.7vw;
+        font-size: 2.5vw;
     }
 
     .formations > .formation-item > .image-content > img {
-        height: 200px;
-        width: 200px;
+        height: 220px;
+        width: 220px;
         margin: auto;
     }
 
-    #footer {
-        flex-direction: column;
+    .skills-content {
+        width: 90%;
+    }
+
+    .skills-content > .skill > .title {
+        font-size: 3vw;
+        margin: 10px;
+    }
+    
+    .skills-content > .skill > .loadingbar {
+        display: flex;
+        width: 100%;
+        height: 25px;
+        border-radius: 100px;
+        background: rgba(0,0,0,0.5);
+    }
+    
+    .skills-content > .skill > .loadingbar > .value {
+        padding: 2px;
+        background: linear-gradient(to right,#00a2ff,#00bdad);
+        color: #fff;
+        border-radius: 15px;
     }
 
     #footer > .social-medias > a {
-        margin: 10px;
-        height: 13vw;
-        width: 13vw;
+        margin: 10px 20px;
+        height: 9vw;
+        width: 9vw;
         border-radius: 250px 250px;
     
         transition: .1s ease-in-out;
     }
 
     #footer > .credits {
-        font-size: 5vw;
+        font-size: 3.5vw;
     }
 }
 /*
