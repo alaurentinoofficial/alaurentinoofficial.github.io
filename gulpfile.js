@@ -6,6 +6,15 @@ var htmlmin = require('gulp-htmlmin');
 var uglify = require('gulp-uglify');
 var inject = require('gulp-inject');
 var webserver = require('gulp-webserver');
+var imagemin = require('gulp-imagemin');
+
+gulp.task('images', function () {
+    return gulp.src(['./src/imgs/**/*.png', './src/imgs/**/*.jpg', './src/imgs/**/*.jpeg'])
+        // Minify the photos
+        .pipe(imagemin())
+        // Output
+        .pipe(gulp.dest('./dist/imgs'))
+});
 
 gulp.task('styles', function () {
     return gulp.src('./src/css/**/*.css')

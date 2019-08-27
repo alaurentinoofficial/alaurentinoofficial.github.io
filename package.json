@@ -13,6 +13,7 @@
         "gulp-autoprefixer": "latest",
         "gulp-csso": "^2.0.0",
         "gulp-htmlmin": "^3.0.0",
+        "gulp-imagemin": "^6.1.0",
         "gulp-inject": "^5.0.4",
         "gulp-uglify": "^2.0.0",
         "gulp-webserver": "^0.9.1",
