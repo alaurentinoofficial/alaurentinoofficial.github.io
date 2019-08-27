@@ -41,17 +41,16 @@ gulp.task('webserver', function () {
     gulp.src('./')
         .pipe(webserver({
             livereload: true,
-            directoryListing: true,
             open: true,
             port: 3000
         }));
 });
 
 
-gulp.task('default', function() {
-    return gulp.watch('./', gulp.series('pages', 'webserver'))
+gulp.task('watch', function () {
+    gulp.watch('./src/*.html', gulp.series('pages'));
+    gulp.watch('./src/css/**.css', gulp.series('styles'));
+    gulp.watch('./src/js/**.js', gulp.series('scripts'));
 });
 
-// gulp.task('watch', ['serve'], function () {
-//     gulp.watch('./', ['inject']);
-// });
+gulp.task('default', gulp.parallel('webserver', 'watch'));
