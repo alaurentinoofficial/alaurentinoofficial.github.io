@@ -112,6 +112,7 @@ i {
 .down-arrow a {
     margin: auto;
     margin-top: -80px;
+    cursor: pointer;
 }
 
 .myself {
@@ -194,8 +195,14 @@ i {
     width: 60%;
     display: flex;
     flex: 0 1 calc(50% - 10px - 2px);
-    margin: auto;
+    margin: 30px auto 30px auto;
     flex-direction: row-reverse;
+
+    background: rgba(0, 5, 10, 0.3);
+
+    -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    -moz-box-shadow:    0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    box-shadow:         0px 0px 70px -1px rgba(0, 5, 10, 0.7);
 }
 
 .formations > .formation-item {
@@ -210,10 +217,6 @@ i {
     border-radius: 6px;
     overflow: hidden;
     color: #eee;
-
-    -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
-    -moz-box-shadow:    0px 0px 70px -1px rgba(0, 5, 10, 0.7);
-    box-shadow:         0px 0px 70px -1px rgba(0, 5, 10, 0.7);
 
     z-index: 1200;
 }

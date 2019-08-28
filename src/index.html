@@ -35,7 +35,7 @@
                 <div class="myname">Anderson Laurentino</div>
             </div>
             <div class="down-arrow">
-                <a href="#whoami"><i class="arrow down"></i></a>
+                <a onclick="moveTo('#whoami')"><i class="arrow down"></i></a>
             </div>
             <div id="particles-js"></div>
         </section>
@@ -44,7 +44,7 @@
                     <span class="title">whoami</span>
                 </div>
                 <div class="text">
-                    Hello! My name is Anderson Laurentino, I have a degree in Information Systems from UFPE(Federal University of Pernambuco) and a digital game programming technician from NAVE Recife. Since I was a child I was always very curious and loved to take apart to understand things. In my 11 years, I wanted to build my own steering wheel to play my favorite racing game, so I discovered electronics and it didn't take long to converge on programming. In high school, I discovered the world of artificial intelligence, specifically neural networks, and fell in love. Currently, I have been working on backend systems development focusing on machine learning and analytics, applying agile and CI/CD methodologies.
+                    Hello! My name is Anderson Laurentino, I have a degree in Information Systems from UFPE(Federal University of Pernambuco) and a digital game programming technician from NAVE Recife. Since I was a child I was always very curious and loved to take apart to understand things. In my 11 years, I wanted to build my own steering wheel to play my favorite racing game, so I discovered electronics and it didn't take long to converge on programming. In high school, I fell in love for artificial intelligence, specifically neural networks. Currently, I have been working on backend systems development focusing on machine learning and analytics.
                 </div>
         </section> 
         <section id="college" class="section">
@@ -79,19 +79,19 @@
             <div class="skills-content">
                 <div class="skill">
                     <div class="title">Python</div>
-                    <div class="loadingbar"><span class="value" style="width:90%"></span></div>
+                    <div class="loadingbar"><span class="value" value="90" style="width:90%"></span></div>
                 </div>
                 <div class="skill">
                         <div class="title">SQL Server</div>
-                        <div class="loadingbar"><span class="value" style="width:90%"></span></div>
+                        <div class="loadingbar"><span class="value" value="90" style="width:90%"></span></div>
                     </div>
                 <div class="skill">
                     <div class="title">Machine Learning</div>
-                    <div class="loadingbar"><span class="value" style="width:70%"></span></div>
+                    <div class="loadingbar"><span class="value" value="70" style="width:70%"></span></div>
                 </div>
                 <div class="skill">
                     <div class="title">Data Visualization</div>
-                    <div class="loadingbar"><span class="value" style="width:60%"></span></div>
+                    <div class="loadingbar"><span class="value" value="60" style="width:60%"></span></div>
                 </div>
             </div>
         </section>
@@ -108,4 +108,11 @@
     <!-- inject:js -->
     <script src="./js/particle-system.js"></script>
     <!-- endinject -->
+    <script>
+        function moveTo(component) {
+            document.querySelector(component).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+    </script>
 </html>
