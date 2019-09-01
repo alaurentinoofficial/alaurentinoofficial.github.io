@@ -1,1 +1,0 @@
-document.querySelector(".#whoiam").scrollIntoView({behavior:"smooth"});

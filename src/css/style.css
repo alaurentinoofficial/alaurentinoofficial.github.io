@@ -1,6 +1,7 @@
-html {
+/* html {
     scroll-behavior: smooth;
-}
+    -webkit-sco
+} */
 
 body {
     margin: 0;
@@ -11,6 +12,11 @@ body {
   
 canvas {
     display: block;
+}
+
+
+.center {
+    margin: auto;
 }
 
 
@@ -43,6 +49,9 @@ canvas {
     position: relative !important;
     padding-top: 70px;
     padding-bottom: 70px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 

@@ -36,7 +36,7 @@ gulp.task('scripts', function () {
 
 
 gulp.task('pages', function () {
-    return gulp.src(['./src/index.html'])
+    return gulp.src(['./src/*.html'])
         .pipe(inject(gulp.src('./dist/css/**/*.css')))
         .pipe(inject(gulp.src('./dist/js/**/*.js')))
         .pipe(htmlmin({
