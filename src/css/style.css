@@ -207,11 +207,12 @@ i {
     content: '';
     position: absolute;
     width: 6px;
-    background: linear-gradient(to bottom, #00a2ff, #00bdad);
+    background: #132644;
     top: 0;
     bottom: 0;
     left: 50%;
     margin-left: -3px;
+    border-radius: 30px;
 
     -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
     -moz-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
@@ -231,7 +232,7 @@ i {
     width: 20px;
     height: 20px;
     right: -10px;
-    background: #fff;
+    background: linear-gradient(to bottom, #00a2ff, #00bdad);
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -284,8 +285,9 @@ i {
     left: -10px;
 }
 
-.auto {
-    margin: auto;
+.content > .item {
+    align-self: center;
+    padding-left: 10px;
 }
 
 .content {
@@ -304,7 +306,10 @@ i {
 .timeline .content .logo {
     height: 100px;
     width: 100px;
-    margin: auto;
+}
+
+.timeline .content p {
+    font-size: 16px;
 }
 
 .cards {
