@@ -192,7 +192,6 @@ i {
        EDUCATION
 ###########################
 */
-
 .timeline, .container {
     box-sizing: border-box;
 }
@@ -201,6 +200,7 @@ i {
     position: relative;
     width: 1000px;
     margin: 0 auto;
+    padding-top: 40px;
 }
 
 .timeline::after {
@@ -311,7 +311,17 @@ i {
 .timeline .content p {
     font-size: 16px;
 }
+/*
+###########################
+###########################
+*/
 
+
+/*
+###########################
+           CARDS
+###########################
+*/
 .cards {
     width: 60%;
     display: flex;
@@ -596,36 +606,3 @@ i {
 ###########################
 ###########################
 */
-
-
-/* @media screen and (max-width: 600px) {
-    .timeline {
-        width: 100%;
-    }
-    
-    .timeline::after {
-        left: 31px;
-    }
-
-    .container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    .container::before {
-        left: 60px;
-        border: medium solid #0a1e3f;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #0a1e3f transparent transparent;
-    }
-
-    .left::after, .right::after {
-        top: 20px;
-        left: 20px;
-    }
-
-    .right {
-        left: 0%;
-    }
-} */
