@@ -5,26 +5,25 @@
 
 body {
     margin: 0;
-    font:normal 75% Arial, Helvetica, sans-serif;
+    font: normal 75% Arial, Helvetica, sans-serif;
     background: #041022;
     color: #eee;
 }
-  
+
 canvas {
     display: block;
 }
 
-
 .center {
     margin: auto;
 }
-
 
 /*
 ###########################
        PARTICLE JS
 ###########################
 */
+
 #particles-js {
     position: absolute;
     width: 100%;
@@ -34,17 +33,18 @@ canvas {
     background-size: cover;
     background-position: 50% 50%;
 }
+
 /*
 ###########################
 ###########################
 */
-
 
 /*
 ###########################
          SECTION
 ###########################
 */
+
 .section {
     position: relative !important;
     padding-top: 70px;
@@ -54,17 +54,15 @@ canvas {
     flex-direction: column;
 }
 
-
-.section > .title-content {
+.section>.title-content {
     padding: 15px;
     display: flexbox;
     position: relative;
     display: flex;
 }
 
-.section > .title-content > .title {
+.section>.title-content>.title {
     margin: auto;
-
     font-family: 'Roboto', sans-serif;
     font-size: 35px;
     font-weight: 600;
@@ -73,8 +71,9 @@ canvas {
     -moz-background-clip: text;
     -o-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to right,#00a2ff,#00bdad);
+    background-image: linear-gradient(to right, #00a2ff, #00bdad);
 }
+
 /*
 ###########################
 ###########################
@@ -85,16 +84,16 @@ canvas {
        DASHBOARD
 ###########################
 */
+
 #dashboard {
-    padding: 0 !important;  
+    padding: 0 !important;
     height: 100%;
     background: #000;
     display: flex;
     flex-direction: column;
-
-    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow:    0px 0px 15px 0px rgba(0,0,0,0.75);
-    box-shadow:         0px 0px 15px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
 i {
@@ -102,9 +101,9 @@ i {
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 10px;
-    border-image: linear-gradient(to right,#00a2ff,#00bdad) 1 1;
+    border-image: linear-gradient(to right, #00a2ff, #00bdad) 1 1;
 }
-  
+
 .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
@@ -135,16 +134,13 @@ i {
 .myself img {
     width: 30%;
     width: 30%;
-
     margin: auto;
     margin-bottom: 40px;
-
     border-radius: 300px 300px;
     border: 2px solid #000000;
-
     -webkit-box-shadow: 0px 0px 370px -1px rgba(0, 161, 255, 0.5);
-    -moz-box-shadow:    0px 0px 370px -1px rgba(0, 161, 255, 0.5);
-    box-shadow:         0px 0px 370px -1px rgba(0, 161, 255, 0.5);
+    -moz-box-shadow: 0px 0px 370px -1px rgba(0, 161, 255, 0.5);
+    box-shadow: 0px 0px 370px -1px rgba(0, 161, 255, 0.5);
 }
 
 .myname {
@@ -152,19 +148,18 @@ i {
     padding: 2px;
     margin: auto;
     margin-bottom: 10px;
-
     text-align: center;
     font-size: 2.2vw;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
     border-radius: 2px;
 }
+
 /*
 ###########################
 ###########################
 */
-
 
 /*
 ###########################
@@ -176,82 +171,189 @@ i {
     background: #041022;
 }
 
-
-#whoami > .text {
+#whoami>.text {
     text-align: center;
     margin: auto;
     width: 40%;
-
     color: #eee;
     text-align: justify;
     word-wrap: normal;
     font-family: Helvetica, 'Roboto', sans-serif;
     font-size: 1.1vw;
 }
+
 /*
 ###########################
 ###########################
 */
-
-
 
 /*
 ###########################
        EDUCATION
 ###########################
 */
-.formations  {
+
+.timeline, .container {
+    box-sizing: border-box;
+}
+
+.timeline {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background: linear-gradient(to bottom, #00a2ff, #00bdad);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+
+    -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    -moz-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    background: #fff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+
+    -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    -moz-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+}
+
+.left {
+    right: 0;
+}
+
+.right {
+    left: 50%;
+}
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #0a1e3f;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #0a1e3f;
+}
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #0a1e3f;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #0a1e3f transparent transparent;
+}
+
+.left::after {
+    top: 20px;
+}
+
+.right::after {
+    top: 20px;
+    left: -10px;
+}
+
+.auto {
+    margin: auto;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: #0a1e3f;
+    position: relative;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+
+    -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    -moz-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+}
+
+.timeline .content .logo {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}
+
+.cards {
     width: 60%;
     display: flex;
     flex: 0 1 calc(50% - 10px - 2px);
     margin: 30px auto 30px auto;
     flex-direction: row-reverse;
-
     background: rgba(0, 5, 10, 0.3);
-
     -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
-    -moz-box-shadow:    0px 0px 70px -1px rgba(0, 5, 10, 0.7);
-    box-shadow:         0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    -moz-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
 }
 
-.formations > .formation-item {
+.cards>.card-item {
     flex-direction: column;
     align-content: center;
     text-align: center;
-
     width: 100%;
-
     background: rgb(7, 25, 53);
     margin: 5px;
     border-radius: 6px;
     overflow: hidden;
     color: #eee;
-
     z-index: 1200;
 }
 
-.formations > .formation-item > .duration {
+.cards>.card-item>.duration {
     display: flex;
     align-self: flex-end;
 }
 
-.formations > .formation-item > .info {
+.cards>.card-item>.info {
     margin: auto;
     padding: 20px;
-
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
 }
 
-.formations > .formation-item > .image-content {
+.cards>.card-item>.image-content {
     background: #0a1e3f;
 }
 
-.formations > .formation-item > .image-content > img {
+.cards>.card-item>.image-content>img {
     height: 100px;
     width: 100px;
     margin: auto;
 }
+
 /*
 ###########################
 ###########################
@@ -262,6 +364,7 @@ i {
          SKILLS
 ###########################
 */
+
 .skills-content {
     margin: auto;
     width: 40%;
@@ -269,137 +372,129 @@ i {
     flex-direction: column;
 }
 
-.skills-content > .skill {
+.skills-content>.skill {
     margin: 10px;
     /* display: flex;
     flex-direction: row; */
 }
 
-.skills-content > .skill > .title {
+.skills-content>.skill>.title {
     /* display: block;
     width: 200px; */
-
     font-size: 17px;
 }
 
-.skills-content > .skill > .loadingbar {
+.skills-content>.skill>.loadingbar {
     display: flex;
     width: 100%;
     height: 10px;
     border-radius: 15px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.skills-content > .skill > .loadingbar > .value {
+.skills-content>.skill>.loadingbar>.value {
     padding: 2px;
-    background: linear-gradient(to right,#00a2ff,#00bdad);
+    background: linear-gradient(to right, #00a2ff, #00bdad);
     color: #fff;
     border-radius: 15px;
-
     -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 161, 255, 0.5);
-    -moz-box-shadow:    0px 0px 20px -1px rgba(0, 161, 255, 0.5);
-    box-shadow:         0px 0px 20px -1px rgba(0, 161, 255, 0.5);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 161, 255, 0.5);
+    box-shadow: 0px 0px 20px -1px rgba(0, 161, 255, 0.5);
 }
+
 /*
 ###########################
 ###########################
 */
-
 
 /*
 ###########################
          FOOTER
 ###########################
 */
+
 #footer {
     background: #030b18;
     padding: 5px;
-
     display: flex;
     flex-direction: row;
 }
 
-#footer > .social-medias {
+#footer>.social-medias {
     margin: auto;
     display: inline-flex;
     flex-direction: row;
 }
 
-#footer > .social-medias > a {
+#footer>.social-medias>a {
     margin: 2px;
     display: flex;
     flex-direction: row;
     height: 2vw;
     width: 2vw;
-    background-image: linear-gradient(to right,#00a2ff,#00bdad);
+    background-image: linear-gradient(to right, #00a2ff, #00bdad);
     border-radius: 50px 50px;
-
     transition: .2s all;
 }
 
-#footer > .social-medias > a:hover {
+#footer>.social-medias>a:hover {
     background: #0084d1;
-    background-image: linear-gradient(to right,#00bdad, #00a2ff);
+    background-image: linear-gradient(to right, #00bdad, #00a2ff);
 }
 
-#footer > .social-medias > a > img {
+#footer>.social-medias>a>img {
     display: flex;
     height: 60%;
     width: 60%;
     margin: auto;
 }
 
-#footer > .credits {
+#footer>.credits {
     align-self: center;
     margin: auto;
     font-size: 1vw;
     color: #fff;
 }
+
 /*
 ###########################
 ###########################
 */
-
 
 /*
 ###########################
        RESPONSIVE
 ###########################
 */
+
 @media screen and (max-width: 1280px) {
-    #whoami > .text {
+    #whoami>.text {
         width: 70%;
         font-size: 3vw;
     }
-
-    .formations  {
+    .cards {
         width: 70%;
         flex-wrap: wrap-reverse;
     }
-
     .skills-content {
         width: 70%;
     }
-
-    #footer > .social-medias > a {
+    #footer>.social-medias>a {
         margin: 10px;
         height: 4vw;
         width: 4vw;
         border-radius: 250px 250px;
-    
         transition: .1s ease-in-out;
     }
-
-    #footer > .credits {
+    #footer>.credits {
         font-size: 2vw;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .section > .title-content > .title {
+    .section>.title-content>.title {
         font-size: 5vw;
     }
-
     #dashboard {
         height: 100%;
     }
@@ -407,73 +502,125 @@ i {
         width: 50%;
         width: 50%;
     }
-
     .myname {
         font-size: 5vw;
     }
-
-    #whoami > .text {
+    #whoami>.text {
         width: 80%;
         font-size: 4vw;
     }
-    .formations  {
+    .cards {
         width: 90%;
         flex-wrap: wrap-reverse;
     }
-
-    .formations > .formation-item {
+    .cards>.card-item {
         margin: 25px;
         border-radius: 10px;
     }
-
-    .formations > .formation-item > .info {
+    .cards>.card-item>.info {
         font-size: 3.2vw;
     }
-
-    .formations > .formation-item > .image-content > img {
+    .cards>.card-item>.image-content>img {
         height: 180px;
         width: 180px;
         margin: auto;
     }
-
     .skills-content {
         width: 90%;
     }
-
-    .skills-content > .skill > .title {
+    .skills-content>.skill>.title {
         font-size: 3vw;
         margin-bottom: 2px;
     }
-    
-    .skills-content > .skill > .loadingbar {
+    .skills-content>.skill>.loadingbar {
         display: flex;
         width: 100%;
         height: 12px;
         border-radius: 100px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
     }
-    
-    .skills-content > .skill > .loadingbar > .value {
+    .skills-content>.skill>.loadingbar>.value {
         padding: 2px;
-        background: linear-gradient(to right,#00a2ff,#00bdad);
+        background: linear-gradient(to right, #00a2ff, #00bdad);
         color: #fff;
         border-radius: 15px;
     }
-
-    #footer > .social-medias > a {
+    #footer>.social-medias>a {
         margin: 10px;
         height: 9vw;
         width: 9vw;
         border-radius: 250px 250px;
-    
         transition: .1s ease-in-out;
     }
-
-    #footer > .credits {
+    #footer>.credits {
         font-size: 3.5vw;
     }
+
+    .timeline {
+        width: 100%;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .container::before {
+        left: 60px;
+        border: medium solid #0a1e3f;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #0a1e3f transparent transparent;
+    }
+
+    .left::after, .right::after {
+        top: 20px;
+        left: 20px;
+    }
+
+    .right {
+        left: 0%;
+    }
 }
+
 /*
 ###########################
 ###########################
 */
+
+
+/* @media screen and (max-width: 600px) {
+    .timeline {
+        width: 100%;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+
+    .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .container::before {
+        left: 60px;
+        border: medium solid #0a1e3f;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #0a1e3f transparent transparent;
+    }
+
+    .left::after, .right::after {
+        top: 20px;
+        left: 20px;
+    }
+
+    .right {
+        left: 0%;
+    }
+} */
