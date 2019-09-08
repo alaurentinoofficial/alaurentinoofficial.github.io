@@ -167,10 +167,6 @@ i {
 ###########################
 */
 
-#whoami {
-    background: #041022;
-}
-
 #whoami>.text {
     text-align: center;
     margin: auto;
@@ -306,6 +302,7 @@ i {
 .timeline .content .logo {
     height: 100px;
     width: 100px;
+    margin: auto 0;
 }
 
 .timeline .content p {
@@ -389,13 +386,9 @@ i {
 
 .skills-content>.skill {
     margin: 10px;
-    /* display: flex;
-    flex-direction: row; */
 }
 
 .skills-content>.skill>.title {
-    /* display: block;
-    width: 200px; */
     font-size: 17px;
 }
 
@@ -412,9 +405,9 @@ i {
     background: linear-gradient(to right, #00a2ff, #00bdad);
     color: #fff;
     border-radius: 15px;
-    -webkit-box-shadow: 0px 0px 20px -1px rgba(0, 161, 255, 0.5);
-    -moz-box-shadow: 0px 0px 20px -1px rgba(0, 161, 255, 0.5);
-    box-shadow: 0px 0px 20px -1px rgba(0, 161, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 15px -1px rgba(0, 161, 255, 0.9);
+    -moz-box-shadow:    0px 0px 15px -1px rgba(0, 161, 255, 0.9);
+    box-shadow:         0px 0px 15px -1px rgba(0, 161, 255, 0.9);
 }
 
 /*
@@ -540,6 +533,11 @@ i {
         width: 180px;
         margin: auto;
     }
+    .timeline .content .logo {
+        height: 70px;
+        width: 70px;
+        margin: auto 0;
+    }    
     .skills-content {
         width: 90%;
     }
