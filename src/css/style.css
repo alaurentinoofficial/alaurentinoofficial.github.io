@@ -3,6 +3,31 @@
     -webkit-sco
 } */
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #00bdad, #00a2ff);
+    border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, #1b7971, #105881);
+    cursor: pointer;
+}
+
 body {
     margin: 0;
     font: normal 75% Arial, Helvetica, sans-serif;
@@ -469,6 +494,88 @@ i {
 ###########################
 */
 
+
+/*
+###########################
+       PORTIFOLIO
+###########################
+*/
+
+ol.portifolio-slider {
+    margin: 0;
+    padding: 40px;
+
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+ol.portifolio-slider > li.item {
+    display: inline-flex;
+    white-space: normal;
+    
+    height: 240px;
+    width: 300px;
+
+    margin: 20px;
+
+    border-radius: 12px;
+    border-bottom: #00a2ff solid 6px;
+
+    background: #132644;
+
+    -webkit-box-shadow: 0px 0px 50px -1px rgba(0, 5, 10, 0.7);
+    -moz-box-shadow:    0px 0px 50px -1px rgba(0, 5, 10, 0.7);
+    box-shadow:         0px 0px 50px -1px rgba(0, 5, 10, 0.7);
+}
+
+ol.portifolio-slider > li.item > .item-content {
+    padding: 20px;
+}
+
+ol.portifolio-slider > li.item > .item-content > .img {
+    height: 50px;
+    width: 50px;
+
+    margin: -35px auto 15px;
+    padding: 16px;
+    background: linear-gradient(to right, #00bdad, #00a2ff);
+    border-radius: 70px;
+}
+
+ol.portifolio-slider > li.item > .item-content > .img > img {
+    height: 50px;
+    width: 50px;
+}
+
+ol.portifolio-slider > li.item > .item-content > .title {
+    margin: 10px 0 10px 0;
+    display: block;
+
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+ol.portifolio-slider > li.item > .item-content > .title > a {
+    text-decoration: underline;
+    color: #fff;
+}
+
+ol.portifolio-slider > li.item > .item-content > .description {
+    color: rgb(214, 214, 214);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+###########################
+###########################
+*/
+
+
 /*
 ###########################
        RESPONSIVE
@@ -501,7 +608,7 @@ i {
 
 @media screen and (max-width: 1000px) {
     .section>.title-content>.title {
-        font-size: 5vw;
+        font-size: 6vw;
     }
     #dashboard {
         height: 100%;
@@ -533,10 +640,38 @@ i {
         width: 180px;
         margin: auto;
     }
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background: #132644;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -15px;
+        border-radius: 30px;
+    
+        -webkit-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+        -moz-box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+        box-shadow: 0px 0px 70px -1px rgba(0, 5, 10, 0.7);
+    }
+    .container::before {
+        margin-left: -25px;
+    }
+    .container::after {
+        margin-left: -11px;
+    }
+    .timeline > .container {
+        padding-left: 45px;
+        padding-right: 15px;
+    }
+    .timeline .content {
+        flex-direction: column;
+    }
     .timeline .content .logo {
         height: 70px;
         width: 70px;
-        margin: auto 0;
+        margin: auto;
     }    
     .skills-content {
         width: 90%;

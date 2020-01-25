@@ -9,7 +9,7 @@ var webserver = require('gulp-webserver');
 var imagemin = require('gulp-imagemin');
 
 gulp.task('images', function () {
-    return gulp.src(['./src/imgs/**/*.png', './src/imgs/**/*.jpg', './src/imgs/**/*.jpeg'])
+    return gulp.src(['./src/imgs/**/*.png', './src/imgs/**/*.jpg', './src/imgs/**/*.jpeg', './src/imgs/**/*.svg'])
         // Minify the photos
         .pipe(imagemin())
         // Output
@@ -57,6 +57,7 @@ gulp.task('webserver', function () {
 
 
 gulp.task('watch', function () {
+    gulp.watch(['./src/imgs/**/*.png', './src/imgs/**/*.jpg', './src/imgs/**/*.jpeg', './src/imgs/**/*.svg'], gulp.series('images'));
     gulp.watch('./src/*.html', gulp.series('pages'));
     gulp.watch('./src/css/**.css', gulp.series('styles'));
     gulp.watch('./src/js/**.js', gulp.series('scripts'));
