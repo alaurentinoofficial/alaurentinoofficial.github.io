@@ -33,6 +33,14 @@
             <div class="myself">
                 <img src="https://alaurentinoofficial.github.io/dist/imgs/myself.jpg" alt="Anderson Laurentino"/>
                 <div class="myname">Anderson Laurentino</div>
+                <span class="social-sparse"></span>
+                <div class="social-container">
+                    <div class="social-out social-medias">
+                        <a href="https://github.com/alaurentinoofficial" target="_blank"><img src="https://alaurentinoofficial.github.io/dist/imgs/github.png"/></a>
+                        <a href="https://linkedin.com/in/alaurentinoofficial" target="_blank"><img src="https://alaurentinoofficial.github.io/dist/imgs/linkedin.png"/></a>
+                        <a href="mailto:anderson@laurentino.me"><img src="https://alaurentinoofficial.github.io/dist/imgs/envelope.png"/></a>
+                    </div>
+                </div>
             </div>
             <div class="down-arrow">
                 <a href="#whoami"><i class="arrow down"></i></a>
@@ -76,7 +84,7 @@
                     <div class="loadingbar"><span class="value" value="90" style="width:90%"></span></div>
                 </div>
                 <div class="skill">
-                        <div class="title">Data Engineering</div>
+                        <div class="title">Deep Learning</div>
                         <div class="loadingbar"><span class="value" value="90" style="width:80%"></span></div>
                     </div>
                 <div class="skill">
@@ -84,7 +92,7 @@
                     <div class="loadingbar"><span class="value" value="70" style="width:80%"></span></div>
                 </div>
                 <div class="skill">
-                    <div class="title">Data Visualization</div>
+                    <div class="title">Data Engineering</div>
                     <div class="loadingbar"><span class="value" value="60" style="width:60%"></span></div>
                 </div>
             </div>
@@ -112,7 +120,7 @@
                     <li class="item">
                         <div class="item-content">
                             <div class="img"><img src="/dist/imgs/voice-recognition.svg" alt=""/></div> <!-- src: https://www.flaticon.com/free-icon/voice-recognition_1231058?term=wave%20sound&page=1&position=27-->
-                            <div class="title"><a href="https://github.com/alaurentinoofficial/speech-recognition">Speech Recognition</a></div>
+                            <div class="title"><a target="_blank" href="https://github.com/alaurentinoofficial/speech-recognition">Speech Recognition</a></div>
                             <div class="description">Speech recognition using CRNN with LibriSpeech audio dataset.</div>
                         </div>
                     </li>
@@ -161,6 +169,36 @@
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 500);
+        });
+
+        var sociallocation = -10 + $('#dashboard .social-container').position().top  + parseInt($('#dashboard .social-container').css("margin-top").replace('px', ''));
+
+        $(window).bind('resize', function() {
+            if($('.social-container').hasClass('fixed'))
+            {
+                $('.social-container').removeClass('fixed');
+                $('.social-sparse').removeClass('active');
+            }
+
+            sociallocation = -10 + $('#dashboard .social-container').position().top  + parseInt($('#dashboard .social-container').css("margin-top").replace('px', ''));
+
+            if ($(window).scrollTop() > sociallocation) {
+                $('.social-container').addClass('fixed');
+                $('.social-sparse').addClass('active');
+            } else {
+                $('.social-container').removeClass('fixed');
+                $('.social-sparse').removeClass('active');
+            }
+        })
+
+        $(window).bind('scroll', function (e) {
+            if ($(window).scrollTop() > sociallocation) {
+                $('.social-container').addClass('fixed');
+                $('.social-sparse').addClass('active');
+            } else {
+                $('.social-container').removeClass('fixed');
+                $('.social-sparse').removeClass('active');
+            }
         });
 
         function moveTo(component) {

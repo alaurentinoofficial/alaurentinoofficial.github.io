@@ -33,6 +33,7 @@ body {
     font: normal 75% Arial, Helvetica, sans-serif;
     background: #041022;
     color: #eee;
+    scroll-behavior: smooth;
 }
 
 canvas {
@@ -103,6 +104,7 @@ canvas {
 ###########################
 ###########################
 */
+
 
 /*
 ###########################
@@ -179,6 +181,55 @@ i {
     font-weight: 800;
     background: rgba(0, 0, 0, .4);
     border-radius: 2px;
+}
+
+#dashboad .social-sparse {
+    display: none;
+}
+
+#dashboard .social-sparse.active {
+    display: block;
+    position: relative;
+    height: 70px;
+}
+
+.social-container.fixed {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    z-index: 3000;
+}
+
+.social-container.fixed > .social-medias>a {
+    height: 40px;
+    width: 40px;
+}
+
+.social-container {
+    z-index: 3000;
+    width: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.social-container > .social-medias {
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.8);
+
+    border-radius: 100px 100px;
+}
+
+.social-container > .social-medias>a {
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+.social-container > .social-medias>a>img {
+    border: 0;
+    border-color: transparent;
+    border-radius: 0;
 }
 
 /*
@@ -452,13 +503,13 @@ i {
     flex-direction: row;
 }
 
-#footer>.social-medias {
+.social-medias {
     margin: auto;
     display: inline-flex;
     flex-direction: row;
 }
 
-#footer>.social-medias>a {
+.social-medias>a {
     margin: 2px;
     display: flex;
     flex-direction: row;
@@ -469,19 +520,19 @@ i {
     transition: .2s all;
 }
 
-#footer>.social-medias>a:hover {
+.social-medias>a:hover {
     background: #0084d1;
     background-image: linear-gradient(to right, #00bdad, #00a2ff);
 }
 
-#footer>.social-medias>a>img {
+.social-medias>a>img {
     display: flex;
     height: 60%;
     width: 60%;
     margin: auto;
 }
 
-#footer>.credits {
+.credits {
     align-self: center;
     margin: auto;
     font-size: 1vw;
@@ -621,7 +672,7 @@ ol.portifolio-slider > li.item > .item-content > .description {
     }
     #whoami>.text {
         width: 80%;
-        font-size: 4vw;
+        font-size: 6vw;
     }
     .cards {
         width: 90%;
