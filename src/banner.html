@@ -10,18 +10,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#041022"/>
         <meta name="author" content="Anderson Laurentino"/>
-        <meta name="description" content="I'm Anderson Laurentino and I'm engineer with focus on machine learning and analysis, applying agile and CI/CD methodologies."/>
+        <meta name="description" content="Anderson Laurentino"/>
         <meta name="keywords" content="anderson, laurentino, anderson laurentino, engineer, machine learning, machine, learning, artificial intelligence, artificial, intelligence"/>
         
         <!-- Open Graph -->
         <meta property="og:title" content="Anderson Laurentino"/>
-        <meta property="og:description" content="I'm Anderson Laurentino and I'm engineer with focus on machine learning and analysis, applying agile and CI/CD methodologies."/>
+        <meta property="og:description" content="Anderson Laurentino"/>
         <meta property="og:image" content="https://alaurentinoofficial.github.io/dist/imgs/myself.jpg"/>
-        <meta property="og:url" content="https://alaurentinoofficial.github.io/"/>
+        <meta property="og:url" content="https://anderson.laurentino.me/"/>
 
         <!-- Twitter -->
         <meta name="twitter:title" content="Anderson Laurentino "/>
-        <meta name="twitter:description" content="I'm Anderson Laurentino and I'm engineer with focus on machine learning and analysis, applying agile and CI/CD methodologies."/>
+        <meta name="twitter:description" content="Anderson Laurentino"/>
         <meta name="twitter:image" content="https://alaurentinoofficial.github.io/dist/imgs/myself.jpg"/>
         <meta name="twitter:card" content="summary_large_image"/>
 
@@ -33,12 +33,96 @@
             <div class="myself">
                 <img src="https://alaurentinoofficial.github.io/dist/imgs/myself.jpg" alt="Anderson Laurentino"/>
                 <div class="myname">Anderson Laurentino</div>
+                <span class="social-sparse"></span>
+                <div class="social-container">
+                    <div class="social-out social-medias">
+                        <a href="https://github.com/alaurentinoofficial" target="_blank"><img src="https://alaurentinoofficial.github.io/dist/imgs/github.png"/></a>
+                        <a href="https://linkedin.com/in/alaurentinoofficial" target="_blank"><img src="https://alaurentinoofficial.github.io/dist/imgs/linkedin.png"/></a>
+                        <a href="mailto:anderson@laurentino.me"><img src="https://alaurentinoofficial.github.io/dist/imgs/envelope.png"/></a>
+                    </div>
+                </div>
+            </div>
+            <div class="down-arrow">
+                <a href="#whoami"><i class="arrow down"></i></a>
             </div>
             <div id="particles-js"></div>
         </section>
     </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- inject:js -->
     <script src="./js/particle-system.js"></script>
     <!-- endinject -->
+    <script>
+        $(document).on('click', 'a[href^="#"]', function (event) {
+            event.preventDefault();
+
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+
+        var sociallocation = -10 + $('#dashboard .social-container').position().top  + parseInt($('#dashboard .social-container').css("margin-top").replace('px', ''));
+
+        $(window).bind('resize', function() {
+            if($('.social-container').hasClass('fixed'))
+            {
+                $('.social-container').removeClass('fixed');
+                $('.social-sparse').removeClass('active');
+            }
+
+            sociallocation = -10 + $('#dashboard .social-container').position().top  + parseInt($('#dashboard .social-container').css("margin-top").replace('px', ''));
+
+            if ($(window).scrollTop() > sociallocation) {
+                $('.social-container').addClass('fixed');
+                $('.social-sparse').addClass('active');
+            } else {
+                $('.social-container').removeClass('fixed');
+                $('.social-sparse').removeClass('active');
+            }
+        })
+
+        $(window).bind('scroll', function (e) {
+            if ($(window).scrollTop() > sociallocation) {
+                $('.social-container').addClass('fixed');
+                $('.social-sparse').addClass('active');
+            } else {
+                $('.social-container').removeClass('fixed');
+                $('.social-sparse').removeClass('active');
+            }
+        });
+
+        function moveTo(component) {
+            document.querySelector(component).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        const slider = document.querySelector('.portifolio-slider');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 1.3;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    </script>
 </html>

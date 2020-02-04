@@ -1,12 +1,13 @@
 'use strict';
 
-var csso = require('gulp-csso');
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-var uglify = require('gulp-uglify');
-var inject = require('gulp-inject');
-var webserver = require('gulp-webserver');
-var imagemin = require('gulp-imagemin');
+const csso = require('gulp-csso');
+const gulp = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');
+const inject = require('gulp-inject');
+const webserver = require('gulp-webserver');
+const imagemin = require('gulp-imagemin');
+const cachebust = require('gulp-cache-bust');
 
 gulp.task('images', function () {
     return gulp.src(['./src/imgs/**/*.png', './src/imgs/**/*.jpg', './src/imgs/**/*.jpeg', './src/imgs/**/*.svg'])
@@ -39,6 +40,9 @@ gulp.task('pages', function () {
     return gulp.src(['./src/*.html'])
         .pipe(inject(gulp.src('./dist/css/**/*.css')))
         .pipe(inject(gulp.src('./dist/js/**/*.js')))
+        .pipe(cachebust({
+            type: 'timestamp'
+        }))
         .pipe(htmlmin({
             collapseWhitespace: true,
             removeComments: true
